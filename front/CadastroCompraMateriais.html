@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            margin : 0
+        }
+        #menu ul{
+            margin: 0;
+            background-color: #0d131b;
+            list-style: none;
+        }
+        #menu ul li{
+            display: inline;
+        }
+        #menu ul li a{
+            padding: 2px 10px;
+            display: inline-block;
+            }
+        form{
+            margin-left: 10px;
+            display: inline-block;
+        }
+     
+    </style>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+</head>
+<body>
+    <nav id = "menu">
+        <ul>
+            <li><a href="../front/home.html">Início</a></li>
+            <li><a href="../front/CadastroVendaMateriais.html">Cadastrar Venda</a></li>
+            <li><a href="../front/CadastroCompraMateriais.html">Cadastrar Compras</a></li>
+            <li><a href="../front/ListaMateriais.html">Lista Materiais</a></li>
+            <li><a href="../front/login.html">Login/Cadastrar</a></li>
+        </ul>
+
+    </nav>
+    <div class = "tela">
+        <h1> Cadastro de compra de Materiais</h1>
+
+        <div class="dropdown">
+            <h3>Tipo de material</h3> 
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecione o tipo de material            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <h3>Peso do objeto</h3> 
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Peso do objeto
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+            <div>
+                <form>
+                   <h3>Preço</h3> 
+                    <div class="form-group">
+                    <input class="form-control" id="preco" placeholder="insira o preço">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <form>
+                   <h3>Preço</h3> 
+                    <div class="form-group">
+                    <input class="form-control" id="preco" placeholder="insira o preço">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <form>
+                   <h3>Preço</h3> 
+                    <div class="form-group">
+                    <input class="form-control" id="preco" placeholder="insira o preço">
+                    </div>
+                </form>
+            </div>
+            <div>
+                <form>
+                   <h3>Preço</h3> 
+                    <div class="form-group">
+                    <input class="form-control" id="preco" placeholder="insira o preço">
+                    </div>
+                </form>
+            </div>
+    </div>
+    
+</body>
+</html>
