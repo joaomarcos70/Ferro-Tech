@@ -1,0 +1,15 @@
+{
+  "name": "ferrotech-backend",
+  "version": "1.0.0",
+  "description": "projeto para aula de gestão de projetos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "keywords": [
+    "ferrotech"
+  ],
+  "author": "",
+  "license": "ISC"
+}
