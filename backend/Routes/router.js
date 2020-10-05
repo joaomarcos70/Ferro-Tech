@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get('', (req, res) => {
-    res.send('obaaa')
+    res.send('seila vei')
 })
 
 module.exports = router;
