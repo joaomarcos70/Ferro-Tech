@@ -91,12 +91,27 @@ values ('745', '789.90', '1', '254', '023'),
 ('156', '9.99', '2', '134', '023'),
 ('864', '499.99', '1', '987', '135');
 
+create table tipo_usuario (
+	id_tipo_usuario int(11) not null, 
+	tipo int(2),
+	primary key (id_tipo_usuario)
+);
+
+insert into tipo_usuario (id_tipo_usuario, tipo)
+values('01', 'cliente'),
+('02', 'funcionario'),
+('03', 'administrador');
+
 create table usuario (
 	id_usuario int (11) not null,
 	login varchar(20),
 	senha varchar(10),
 	ativo char (1),
-	primary key (id_usuario)
+    cd_tipo_usuario int(11),
+	primary key (id_usuario),
+    Constraint fk_usuario_tipo_usuario
+		foreign key (cd_tipo_usuario) 
+			references  tipo_usuario (id_tipo_usuario)
 );
 
 insert into usuario (id_usuario, login, senha, ativo)
