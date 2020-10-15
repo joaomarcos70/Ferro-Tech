@@ -29,7 +29,7 @@ module.exports.store = async (req, res) => {
         });
 
     } catch (error) {
-        return res.status(500).json({ mensagem: "Erro interno no servidor." });
+        return res.status(500).json({ mensagem: "Erro interno no servidor.", error });
     }
 }
 
