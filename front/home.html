@@ -1,14 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Ferro-Tech</title>
 </head>
+
 <body>
-    <h1>
-        FERRO TECH
-    </h1>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand fonteLogo" href="home.html">Ferro-Tech</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav fonteMenu">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cadastrar
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-dark text-white" href="CadastroCompraMateriais.html">Compras</a>
+                        <a class="dropdown-item bg-dark text-white" href="CadastroVendaMateriais.html">Vendas</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lista de Materiais</a>
+                </li>
+            </ul>
+        </div>
+        <i class="fonteBotao" type="submit" data-toggle="modal" data-target="#loginCadastro">Cadastrar/Login</i>
+    </nav>
+    <div class="divCol1">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card card1">
+                    <img src="img/gif_manager.gif" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Vantagens de utilizar um software de gestão</h5>
+                        <p class="card-text text-justify">
+                            1. Controle do fluxo de caixa da empresa;
+                            <br>
+                            2. Gestão financeira completa e organizada;
+                            <br>
+                            3. Controle de estoque confiável;
+                            <br>
+                            4. Redução de erros manuais e humanos;
+                            <br>
+                            5. Otimização de processos, aumentando a produtividade;
+                            <br>
+                            Aqui você tem acesso a essas vantagens e mais!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="row">
+                    <div class="card card2 col-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Cadastrar Compras</h5>
+                            <p class="card-text text-justify">
+                                Aqui você pode cadastrar as compras que deseja fazer, de modo rápido e ágil. Com isso
+                                você se poupa de todo aquela burocracia de preechimento de documentos, e o deslocamento
+                                até o vendedor. Clique em "Ver mais" e comece agora.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-right p-0">
+                        <a type="button" href="CadastroCompraMateriais.html"
+                            class="btn btn-outline-secondary botaoVerMais">
+                            Ver Mais
+                        </a>
+                    </div>
+
+
+                    <div class="card card3 col-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Cadastrar Vendas</h5>
+                            <p class="card-text text-justify">
+                                Deseja cadastrar uma venda? Sem problemas, clique em "Ver mais" e faça esse procedimento
+                                rapidamente. Aqui você impede que seus dados sejam perdidos em eventuais acidentes, como
+                                por exemplo incêndios e alagamentos (a gente nunca acha que vai acontecer até
+                                acontecer...).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-right p-0">
+                        <a type="button" href="CadastroVendaMateriais.html"
+                            class="btn btn-outline-secondary botaoVerMais">
+                            Ver Mais
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card4">
+                    <ul class="list-group list-group-flush">
+                        <div class="card-header">
+                            Lista de Materiais
+                        </div>
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                        <li class="list-group-item">Cras justo odio</li>
+
+                    </ul>
+                </div>
+                <a type="button" class="btn btn-outline-secondary" style="float: right; margin-top: 3%;">Ver
+                    Mais
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal login/cadastro-->
+    <div class="modal fade" id="loginCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login/Cadastro Ferro-Tech</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Login</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <a class="btn btn-outline-dark" href="cadastroUsuario.html" role="button">Cadastrar-se</a>
+                        <button type="submit" class=" btn btn-outline-primary-login btn-outline-primary"
+                            style="float: right">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark py-1 mt-auto text-center text-white">
+        <div class="mt-2">
+            <strong>
+                <p>Faculdade de Técnologia de Praia Grande - Análise e Desenvolvimento de Sistemas</p>
+                <p>Praia Grande - 2020</p>
+            </strong>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
