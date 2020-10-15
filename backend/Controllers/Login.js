@@ -1,31 +1,26 @@
 const db = require('../db/conexao');
-const bcrypt = require('bcryptjs');
 
 module.exports.store = async (req, res) => {
-    
-    const { email, senha } = req.body;
+
+    const { login, senha } = req.body;
     try {
-        const user = await db("usuario").select("*").where("email", email).first();
+        const user = await db("usuario").select("*").where("login", login).first();
 
         if (!user) {
-            return res.status(401).json({ mensagem: "Email incorreto!" });
+            return res.status(401).json({ mensagem: "Login incorreto!" });
         }
 
-        if (!(bcrypt.compare(senha, user.senha))) {
+        if (senha !== user.senha) {
             return res.status(401).json({ mensagem: "Senha incorreta!" });
         }
 
-        const { id_usuario, nome, id_tipousuario } = user;
+        const {id_usuario} = user;
 
         return res.json({
             user: {
                 id_usuario,
-                nome,
-                email
+                login
             },
-            token: Jwt.sign({ id_usuario, id_tipousuario }, authConfig.secret, {
-                expiresIn: authConfig.expiresIn
-            })
         });
 
     } catch (error) {
