@@ -1,4 +1,4 @@
-const db = require('../banco/conexao');
+const db = require('../db/conexao');
 const bcrypt = require('bcryptjs');
 
 module.exports.store = async (req, res) => {
