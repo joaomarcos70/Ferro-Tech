@@ -1,10 +1,11 @@
-
 const express = require("express");
-const router = express.Router();
+const routes = express.Router();
 
-router.get('', (req, res) => {
-    res.send('seila vei')
-})
+//import das controllers 
+const login = require('../Controllers/Login');
 
-module.exports = router;
+// Rota Session
+routes.post('/login',login.store);
+
+module.exports = routes;
 

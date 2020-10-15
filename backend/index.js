@@ -4,6 +4,7 @@ const port = 3000
 
 const router = require('./Routes/router')
 
+app.use(express.json());
 app.use("/", router);
 
 
