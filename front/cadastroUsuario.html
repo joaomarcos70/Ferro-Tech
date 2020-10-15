@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastrar</title>
-    </head>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+</head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand fonteLogo" href="#">Ferro-Tech</a>
+        <a class="navbar-brand fonteLogo" href="home.html">Ferro-Tech</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -32,8 +25,8 @@
                         Cadastrar
                     </a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item text-white" href="#">Compras</a>
-                        <a class="dropdown-item text-white" href="#">Vendas</a>
+                        <a class="dropdown-item bg-dark text-white" href="CadastroCompraMateriais.html">Compras</a>
+                        <a class="dropdown-item bg-dark text-white" href="CadastroVendaMateriais.html">Vendas</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -44,40 +37,78 @@
         <i class="fonteBotao" type="submit" data-toggle="modal" data-target="#loginCadastro">Cadastrar/Login</i>
     </nav>
 
-    <div style="margin-top: 5%;">
+    <!-- Modal login/cadastro-->
+    <div class="modal fade" id="loginCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login/Cadastro Ferro-Tech</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Login</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <a class="btn btn-outline-dark" href="cadastroUsuario.html" role="button">Cadastrar-se</a>
+                        <button type="submit" class=" btn btn-outline-primary-login btn-outline-primary"
+                            style="float: right">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 5%;">
+
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center display-4 mb-5">Cadastro de Clientes</p>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm">
                 <form>
                     <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Nome Completo</label>
-                        <input type="input" class="form-control" id="inputEmail4" placeholder="Ex: Antonio Carlos Lima Santos">
-                      </div>
-                      <div class="form-group col-md-3">
-                        <div class="form-group">
-                            <label for="sexo">Sexo</label>
-                            <select class="form-control" id="sexo">
-                              <option>Feminino</option>
-                              <option>Masculino</option>
-                              <option>Outra</option>
-                            </select>
-                          </div>
-                      </div>
-                      <div class="form-group col-md-3">
-                        <div class="form-group">
-                            <label for="estadoCivil">Estado Civil</label>
-                            <select class="form-control" id="estadoCivil">
-                              <option>Solteiro/a</option>
-                              <option>Casado/a</option>
-                              <option>Divorciado/a</option>
-                            </select>
-                          </div>
-                      </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Nome Completo</label>
+                            <input type="input" class="form-control" id="inputEmail4"
+                                placeholder="Ex: Antonio Carlos Lima Santos">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <div class="form-group">
+                                <label for="sexo">Sexo</label>
+                                <select class="form-control" id="sexo">
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                    <option>Outra</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <div class="form-group">
+                                <label for="estadoCivil">Estado Civil</label>
+                                <select class="form-control" id="estadoCivil">
+                                    <option>Solteiro/a</option>
+                                    <option>Casado/a</option>
+                                    <option>Divorciado/a</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="dataNascimento">Data de Nascimento</label>
-                            <input class="form-control" type="date" name="dataNascimento" id="dataNascimento"> 
+                            <input class="form-control" type="date" name="dataNascimento" id="dataNascimento">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="nacionalidade">Nacionalidade</label>
@@ -103,7 +134,8 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="complemento-endereco">Complemento</label>
-                            <input class="form-control" type="text" name="complemento-endereco" id="complemento-endereco">
+                            <input class="form-control" type="text" name="complemento-endereco"
+                                id="complemento-endereco">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="municipio">Munícipio</label>
@@ -125,18 +157,37 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="dataCadastro">Data de Cadastro</label>
-                            <input class="form-control" type="date" name="dataCadastro" id="dataCadastro"> 
+                            <input class="form-control" type="date" name="dataCadastro" id="dataCadastro">
                         </div>
                         <div class="form-group col-auto-md-3 botoesCadastro">
-                            <a class="btn btn-outline-primary-login btn-outline-primary" href="perfil.html" role="button">Cadastrar-se</a>
+                            <a class="btn btn-outline-primary-login btn-outline-primary" href="perfil.html"
+                                role="button">Cadastrar-se</a>
                             <button type="submit" class="btn btn-outline-dark ml-4">Login</button>
                         </div>
                     </div>
-                    
-                  </form>
+
+                </form>
             </div>
         </div>
     </div>
-</div>
+    </div>
+    <footer class="footer bg-dark py-1 mt-auto text-center text-white">
+        <div class="mt-2">
+            <strong>
+                <p>Faculdade de Técnologia de Praia Grande - Análise e Desenvolvimento de Sistemas</p>
+                <p>Praia Grande - 2020</p>
+            </strong>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
