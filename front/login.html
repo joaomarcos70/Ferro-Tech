@@ -36,7 +36,7 @@
 
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                window.location.href="home.html";
+                window.location.href="index.html";
             }
             if (this.readyState == 4 && this.status == 401) {
                 alert("usuario ou senha incorreta");
@@ -46,7 +46,7 @@
             }
         };
 
-        var theUrl = "http://localhost:3000/login";
+        var theUrl = "https://sheltered-brushlands-50177.herokuapp.com/login";
         xmlhttp.open("POST", theUrl);
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');

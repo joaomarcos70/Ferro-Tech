@@ -12,7 +12,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand fonteLogo" href="home.html">Ferro-Tech</a>
+        <a class="navbar-brand fonteLogo" href="index.html">Ferro-Tech</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -180,9 +180,15 @@
 
         var xmlhttp = new XMLHttpRequest();
 
+        var theUrl = "https://sheltered-brushlands-50177.herokuapp.com/login";
+        xmlhttp.open("POST", theUrl);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xmlhttp.send(JSON.stringify({ "login": login, "senha": senha }));
+        
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-               // window.location.href = "home.html";
+               // window.location.href = "index.html";
                alert("usuario logado");
             }
             if (this.readyState == 4 && this.status == 401) {
@@ -193,11 +199,7 @@
             }
         };
 
-        var theUrl = "http://localhost:3000/login";
-        xmlhttp.open("POST", theUrl);
-        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-        xmlhttp.send(JSON.stringify({ "login": login, "senha": senha }));
+       
 
 
 
